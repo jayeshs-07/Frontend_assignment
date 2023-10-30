@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    gap: 5px;
+    /* border: 3px solid rgb(255, 255, 255); */
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.logo{
+    padding: 20px;
+}
+.Gallery{
+    display: grid;
+    width: 80%;
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-columns: repeat(6, 1fr);
+    float: left;
+}
+.img-1{
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-image: url(../css/img/city-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-2{
+    grid-column: 6/7;
+    grid-row: 1/2;
+    background-image: url(../css/img/city-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-3{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-image: url(../css/img/city-3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-4{
+    grid-column: 3/5;
+    grid-row: 2/3;
+    background-image: url(../css/img/city-4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-5{
+    grid-column: 5/7;
+    grid-row: 2/3;
+    background-image: url(../css/img/city-5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-6{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background-image: url(../css/img/city-6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-7{
+    grid-column: 4/7;
+    grid-row: 3/4;
+    background-image: url(../css/img/city-7.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-8{
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background-image: url(../css/img/city-8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-9{
+    grid-column: 3/5;
+    grid-row: 4/5;
+    background-image: url(../css/img/city-9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img-10{
+    grid-column: 5/7;
+    grid-row: 4/5;
+    background-image: url(../css/img/city-10.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.slidebar{
+    width: 20%;
+    height: 680px;
+    float: right;
+    text-align: right;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+
+}
+ul{
+    padding: 20px;
+}
+ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+li:hover{
+    color: #cf3549;
+    cursor: pointer;
+}
+.social-icon {
+    float: right;
+}
+.social-icon li{
+    float: left;
+    margin-left: 10px;
+}
