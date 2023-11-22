@@ -1,3 +1,7 @@
-<svg width="1440" height="855" viewBox="0 0 1440 855" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="720" cy="-709" r="1563.5" fill="#FBFAFE" stroke="#F0EBFA"/>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800">
+	<title>Ellipse 1-svg</title>
+	<style>
+		.s0 { fill: #fbfafe;stroke: #f0ebfa } 
+	</style>
+	<path id="Layer" class="s0" d="m960 800.5c-864.6 0-1563.5-698.9-1563.5-1563.5 0-864.6 698.9-1563.5 1563.5-1563.5 864.6 0 1563.5 698.9 1563.5 1563.5 0 864.6-698.9 1563.5-1563.5 1563.5z"/>
 </svg>
