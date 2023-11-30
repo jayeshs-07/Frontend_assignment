@@ -64,6 +64,9 @@ ul{
 .right_side_btn{
     width: 30%;
 }
+.menu_icon{
+    display: none;
+}
 .btn_login{
     width: 100px;
     border: none;
@@ -403,7 +406,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 60px;
 }
 .left_side{
     width: 50%;
@@ -415,7 +418,76 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-right: 60px;
 }
 .footer_social > li{
     margin-left: 15px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .main{
+        width: fit-content;
+    }
+    .logo_brand{
+        width: 50%;
+        font-size: 32px;
+    }
+    .menu_icon{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 32px;
+    }
+    .menu_list{
+        display: none;
+    }
+    .right_side_btn{
+        display: none;
+    }
+    .banner_section{
+        display: flex;
+    }
+    .banner_text_area > img{
+        width: 530px;
+    }
+    .team_section{
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+    .team_img{
+        width: 100px;
+    }
+    .timeline_section{
+        width:fit-content;
+    }
+    .inner_timeline{
+        flex-direction: column;
+    }
+
+    .left_timeline > img{
+        width: 530px;
+    }
+    .right_timeline{
+        width: 100%;
+    }
+    .timiline_para{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-active{
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    .service_list_section{
+        flex-direction: column;
+    }
+    .inner_project_view{
+        flex-direction: column;
+    }
+    .card_service{
+        width: 100%;
+    }
 }
