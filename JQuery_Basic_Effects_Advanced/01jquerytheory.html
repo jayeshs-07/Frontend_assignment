@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - JQuery Basic, Effects & Advanced </title>
+</head>
+<style>
+    h1,h2,h3,h4,h5,h6 {
+        color: darkblue;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>
+        01. What is JQuery?
+    </h1>
+    <p>
+        jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and
+        manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a
+        multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that
+        millions of people write JavaScript.
+    </p>
+    <h1>
+        02. How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+        Jquery, JQuery Animation?
+    </h1>
+    <h2>Apply css in Jquery</h2>
+    <p>
+
+
+        $(document).ready(function () {<br>
+
+        // Method 1 <br>
+
+        $('body').css('backgroundColor', 'blue') <br>
+
+
+        // Method 2 <br>
+
+        $('body').css({'backgroundColor': 'blue', 'color': 'white'}) <br>
+
+
+        // Method 3 <br>
+
+        $('body').css({backgroundColor: 'blue', color: 'white', fontSize: '30px'}) <br>
+
+
+
+        });
+    </p>
+    <h3>
+        Add class and remove class in Jquery
+    </h3>
+    <p>
+
+        $(document).ready(function () {<br>
+
+        $('#btnAdd').click(function () { <br>
+
+        $('h1').addClass("heading box")<br>
+        }) <br>
+        $('#btnRemove').click(function () { <br>
+
+        $('h1').removeClass('heading') <br>
+        }) <br>
+        $('#btnToggle').click(function () { <br>
+
+        $('h1').toggleClass('heading') <br>
+        }) <br>
+
+        });
+    
+    </p>
+    <h4>JQuery Animation</h4>
+    <p>
+        The .animate() method allows us to create animation effects on any numeric CSS property. <br>
+        In addition to numeric values, each property can take the strings 'show', 'hide', and 'toggle'.
+        Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The default
+        duration is 400 milliseconds. The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600
+        milliseconds, respectively.
+    </p>
+    <h5>
+        03. How to create slider with animation?
+    </h5>
+    <p>
+        jQueryUI provides us a slider control through the slider widget. Slider helps us to get a certain value using a
+        given range. In this article, we will see how to animate a slider. The animate option when set to true will
+        create an animation effect when you directly click at any point on the slider's axis <br> <br>
+        $(".selector").slider( <br>
+        { animate: value } <br>
+        );
+    </p>
+</body>
+
+</html>

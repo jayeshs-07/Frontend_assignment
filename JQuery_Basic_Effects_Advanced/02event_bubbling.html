@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Tickling</title>
+</head>
+<style>
+    div{
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="great-great-parent">
+        Body ( great-great-grandparent )
+        <div class="great-grand-parent">
+          div (great-grandparent )
+            <div class="grand-parent">
+               ul( grandparent )
+                <div class="parent">li (direct parent)
+                    <div class="child">
+                        spna
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   <!-- jquery -->
+
+   <script src="./js/jquery-3.7.1.min.js"></script>
+
+   <!-- script CSS  -->
+
+   <script>
+    // $("*").css({
+    //    margin: "20px",
+    //    boxSizing: "border-box",
+    //    fontSize: '30px'
+    //  });
+    
+    //  $("button").css({
+    //    backgroundColor: "crimson",
+    //    color: "white",
+    //    padding: "10px 30px",
+    //    margin: "10px",
+    //    borderRadius: "10px",
+    //    fontSize: "25px",
+    //    textAlign: "center",
+    //  });
+   </script>
+
+   <!-- script -->
+
+   <script>
+      $(document).ready(function () {
+
+            // Parent 
+
+           $('.child').parents().css({border: '3px solid red'})
+           $('.parent').parents().css({border: '3px solid red'})
+           $('.grand-parent').parents().css({border: '3px solid red'})
+           $('.great-grand-parent').parents().css({border: '3px solid red'})
+           $('.great-great-parent').parents().css({border: '3px solid red'})
+
+
+     });
+   </script>
+</body>
+</html>
