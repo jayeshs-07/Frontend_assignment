@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator in js</title>
+    <style>
+        label{
+            font-size: 18px;
+            margin-left: 25px;
+        }
+        h1{
+            text-align: center;
+        }
+        .card{
+            background-color: aliceblue;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.281);
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form{
+           text-align: center;
+           margin-top: 20px;
+           margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-group{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-field{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        .button{
+            margin-top: 30px;
+        }
+        button{
+            width: 80px;
+            padding: 10px;
+            border: none;
+            font-size: larger;
+            color: #ffffff;
+            background-color: rgb(37, 62, 173);
+        }
+        .resultshow{
+
+        }
+        .result{
+            font-size: 20px;
+            color: rgb(63, 63, 179);
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Marksheet For Information Technology</h1>
+        <div class="form">
+            <div class="input-group">
+                <div class="label">
+
+                    <label for="">C language</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="clanguage" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+
+                    <label for="">C++ language</label> 
+                </div>
+                <div class="input-field">
+                    <input type="number" id="cplus" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+
+                    <label for="">Database</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="database" placeholder="Enter Number"><br>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+
+                    <label for="">HTML</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="html" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label for="">CSS</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="css" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label for="">php</label> 
+                </div>
+                <div class="input-field">
+                    <input type="number" id="php" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label for="">Core Java</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="corejava" placeholder="Enter Number">
+                </div>
+            </div>
+            <div class="button">
+                <button onclick="calculaterusult()">Result</button>
+            </div>
+        </div>
+        <div class="resultshow">
+            <p  class="result" >Total is : <span id="result"></span>/350</p>
+            <p class="percentage"> Percentage is :<span id="percentage"></span> % </p>
+
+        </div>
+    </div>
+    <script>
+            function calculaterusult() {
+            let c = parseFloat(document.getElementById('clanguage').value) || 0;
+            let cplus = parseFloat(document.getElementById('cplus').value) || 0;
+            let database = parseFloat(document.getElementById('database').value) || 0;
+            let html = parseFloat(document.getElementById('html').value) || 0;
+            let css = parseFloat(document.getElementById('css').value) || 0;
+            let php = parseFloat(document.getElementById('php').value) || 0;
+            let corejava = parseFloat(document.getElementById('corejava').value) || 0;
+
+            let totalMarks = c + cplus + database + html + css + php + corejava;
+            let percentage = (totalMarks / 350) * 100;
+
+            document.getElementById("result").textContent = + totalMarks; 
+            document.getElementById("percentage").textContent = +  percentage;
+        }
+        // function add(){
+        //     let a= document.getElementById('fnumber').value;
+        //     let b= document.getElementById('snumber').value;
+        //     sum =parseFloat(a) + parseFloat(b);
+        //     document.getElementById("result").textContent = + sum;
+        //     let totalMarks = cMarks + cppMarks + dbMarks + htmlMarks + cssMarks + phpMarks + javaMarks;
+        //     let percentage = (totalMarks / 350) * 100; // Assuming maximum marks for all subjects is 100
+        //     document.getElementById("percentage").textContent = "Total Marks: " + totalMarks + " | Percentage: " + percentage.toFixed(2) + "%";
+        // }
+       
+
+    </script>
+</body>
+</html>

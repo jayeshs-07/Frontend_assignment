@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - JAVASCRIPT BASIC</title>
+</head>
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: darkblue;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>
+        01. What is JavaScript
+    </h1>
+    <p>
+        JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia,
+        animate
+        images, and pretty much everything else.
+    </p>
+    <h1>02. What is the use of isNaN function? </h1>
+    <p>
+        The isNaN() function determines whether a value is NaN, first converting the value to a number if necessary.
+        Because coercion inside the isNaN() function can be surprising, you may prefer to use
+    </p>
+    <h1>
+        03. What is negative Infinity?
+    </h1>
+    <p>
+        The Number.NEGATIVE_INFINITY static data property represents the negative Infinity value.
+    </p>
+    <h4>Which company developed JavaScript? </h4>
+    <p>
+        JavaScript was created at Netscape Communications by Brendan Eich in 1995.
+    </p>
+    <h1>
+        04. What are undeclared and undefined variables?
+    </h1>
+    <p>
+        <b>Undeclared</b>It occurs when we try to access any variable that is not initialized or declared earlier using
+        the var or const keyword. <br> <br>
+        <b>Undefined</b> It occurs when a variable has been declared but has not been assigned any value. Undefined is
+        not a keyword. <br> console.log(myVariable)
+    </p>
+    <h1>
+        05. Write the code for adding new elements dynamically?
+    </h1>
+    <p>
+    <pre>
+            < div id="box"></ div>
+            < button id="mybutton">
+               Click to Add element
+            < /button >
+
+            /////script///
+
+            document.getElementById("mybutton").
+            addEventListener("click", function () {
+            document.getElementById("box").innerHTML += "< h3>Hello User< / h3>< p >Good morning.</ p>";
+            });
+        </pre>
+
+    </p>
+    <h1>
+        06. What is the difference between ViewState and SessionState?
+    </h1>
+    <p>
+        <b>ViewState</b><br>
+        >> View state can only be visible from a single page and not multiple pages.<br>
+        >> It will retain values in the event of a postback operation occurring. <br>
+        >> Information is stored on the client's end only.<br><br>
+        <b>Session State</b><br>
+        >> Session state value availability is across all pages available in a user session.<br>
+        >> In session state, user data remains in the server. Data is available to user until the browser is closed or
+        there is session expiration.<br>
+        >> Information is stored on the server.<br>
+    </p>
+    <h1>07. What is === operator? </h1>
+    <p>
+        The strict equality (===) operator checks whether its two operands are equal, returning a Boolean result.
+    </p>
+    <h1>08.How can the style/class of an element be changed? </h1>
+    <p>
+        The document.getElementById() method is used to return the element in the document with the “id” attribute and
+        the “className” attribute can be used to change/append the class of the element.
+    </p>
+    <h1>09. How to read and write a file using JavaScript?</h1>
+    <p>
+        The read and write operations in a file can be done by using some commands. But the module which is required to
+        perform these operations is to be imported. The required module is 'fs' which is called as File System module in
+        JavaScript.
+    </p>
+    <h1>
+        10. What are all the looping structures in JavaScript?
+    </h1>
+    <p>
+        for - loops through a block of code a number of times <br>
+        for/in - loops through the properties of an object <br>
+        for/of - loops through the values of an iterable object <br>
+        while - loops through a block of code while a specified condition is true <br>
+        do/while - also loops through a block of code while a specified condition is true <br>
+    </p>
+    <h1>11. How can you convert the string of any base to an integer in JavaScript?</h1>
+    <p>
+        The parseInt() method accepts the string and radix parameter and converts it into an
+        integer.
+    </p>
+    <h1>12. What is the function of the delete operator?</h1>
+    <p>
+        The delete operator removes a property from an object. If the property's value is an object and there are no
+        more references to the object, the object held by that property is eventually released automatically.
+    </p>
+    <h1>13. What are all the types of Pop up boxes available in JavaScript? </h1>
+    <p>
+        Alert box, Confirm box, and Prompt box.
+    </p>
+    <h1>14. What is the use of Void (0)? </h1>
+    <p>
+        The void operator evaluates given expressions and returns undefined.
+    </p>
+    <h1>15. How can a page be forced to load another page in JavaScript? </h1>
+    <p>
+        We can use window.location property inside the script tag to forcefully load another page in Javascript.
+    </p>
+    <h1>
+        16. What are the disadvantages of using innerHTML in JavaScript? 
+    </h1>
+    <p>
+        It is very slow because as inner HTML already parses the content even we have to parse the content again so that’s why it takes time.
+    </p>
+</body>
+
+</html>

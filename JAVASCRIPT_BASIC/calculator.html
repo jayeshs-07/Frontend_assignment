@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator in js</title>
+    <style>
+        label{
+            font-size: 18px;
+        }
+        h1{
+            text-align: center;
+        }
+        .card{
+            background-color: aliceblue;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.281);
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input{
+           text-align: center;
+           margin-top: 20px;
+            
+        }
+        input{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .button{
+            margin-top: 30px;
+        }
+        button{
+            width: 80px;
+            padding: 10px;
+            border: none;
+            font-size: larger;
+            color: #ffffff;
+            background-color: rgb(177, 106, 1);
+        }
+        .result{
+            font-size: 20px;
+            color: rgb(63, 63, 179);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Math Operation</h1>
+        <div class="input">
+
+            <label for="">Enter 1st number</label> <input type="number" id="fnumber" placeholder="Enter Number"> <br>
+            <label for="">Enter 2st number</label> <input type="number" id="snumber" placeholder="Enter Number">
+            
+            <div class="button">
+                <button onclick="add()">+</button>
+                <button onclick="minus()">-</button>
+                <button onclick="multi()">*</button>
+                <button onclick="divide()">/</button>
+                <button onclick="persentage()">%</button>
+            </div>
+        </div>
+        <p  class="result" id="result">Answer is :</p>
+    </div>
+    <script>
+        function add(){
+            let a= document.getElementById('fnumber').value;
+            let b= document.getElementById('snumber').value;
+            sum =parseFloat(a) + parseFloat(b);
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+        function minus(){
+            let a= document.getElementById('fnumber').value;
+            let b= document.getElementById('snumber').value;  
+            sum =parseFloat(a) - parseFloat(b);
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+        function multi(){
+            let a= document.getElementById('fnumber').value;
+            let b= document.getElementById('snumber').value;
+            sum =parseFloat(a) * parseFloat(b);
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+        function divide(){
+            let a= document.getElementById('fnumber').value;
+            let b= document.getElementById('snumber').value;
+            sum =parseFloat(a) / parseFloat(b);
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+        function persentage(){
+            let a= document.getElementById('fnumber').value;
+            let b= document.getElementById('snumber').value;
+            sum =parseFloat(a) % parseFloat(b);
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+
+    </script>
+</body>
+</html>
