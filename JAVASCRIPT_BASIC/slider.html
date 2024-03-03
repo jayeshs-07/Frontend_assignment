@@ -6,170 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <style>
-        .container {
-            width: 900px;
-            margin: 0 auto;
-            max-width: 80%;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        .slick-slider {
-            margin-left: -12%;
-            margin-right: -12%;
+        img {
+            max-width: 100%;
         }
 
-        .slick-list {
-            padding-top: 10% !important;
-            padding-bottom: 10% !important;
-            padding-left: 15% !important;
-            padding-right: 15% !important;
+        h1 {
+            text-align: center;
         }
 
-        .slick-dots {
-            text-align: right;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .slick-track {
-            max-width: 100% !important;
-            transform: translate3d(0, 0, 0) !important;
-            perspective: 100px;
-        }
-
-        .slick-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            opacity: 0;
-            width: 100% !important;
-            transform: translate3d(0, 0, 0);
-            transition: transform 1s, opacity 1s;
-        }
-
-        .slick-snext,
-        .slick-sprev {
-            display: block;
-        }
-
-        .slick-current {
-            opacity: 1;
+        .slider {
+            --slider-padding: 1rem;
+            --slider-column-gap: 1rem;
+            --slide-width: 25%;
+            --slide-min-width: 15rem;
             position: relative;
-            display: block;
-            transform: translate3d(0, 0, 20px);
-            z-index: 2;
-        }
-
-        .slick-snext {
-            opacity: 1;
-            transform: translate3d(20%, 0, 0px);
-            z-index: 1;
-        }
-
-        .slick-sprev {
-            opacity: 1;
-            transform: translate3d(-20%, 0, 0px);
-        }
-
-        .test {
-            display: block;
+            overflow: hidden;
             width: 100%;
-            height: 300px;
-            background: #c00;
-            box-shadow: inset 0px 0px 0px 3px #000
+            margin-top: 20px;
+        }
+
+        .slider__track {
+            display: flex;
+            overflow-x: auto;
+            -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
+            padding-inline: var(--slider-padding);
+            scroll-behavior: smooth;
+            list-style-type: none;
+            padding: 0;
+            margin-right: calc(var(--slider-column-gap) * -1);
+            scrollbar-width: none;
+        }
+
+        .slider__track>* {
+            flex: 0 0 var(--slide-width);
+            min-width: var(--slide-min-width);
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            padding-right: var(--slider-column-gap);
+        }
+
+        .slider__track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider__buttons {
+            margin-top: 50px;
+            cursor: pointer;
+            font-size: 26px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider__arrow {
+
+            margin-left: 50px;
+        }
+
+        .slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 150px;
+            background: #6c5ce7;
+        }
+
+        .slide2 {
+            width: 100%;
+            height: 150px;
+            background-color: rgb(206, 58, 58);
+        }
+
+        .slide3 {
+            width: 100%;
+            height: 150px;
+            background-color: #25a140;
+        }
+
+        .slide4 {
+            width: 100%;
+            height: 150px;
+            background-color: #d2691e;
+        }
+
+        .slide5 {
+            width: 100%;
+            height: 150px;
+            background-color: darkgoldenrod
+        }
+
+        .slide6 {
+            width: 100%;
+            height: 150px;
+            background-color: #dc143c;
+        }
+        .container {
+            padding: 1rem;
+            width: 100%;
+            margin: 0 auto;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <div class="container">
-        <div id="rev_slider">
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
-            </div>
-            <div class="rev_slide">
-                <div class="test"></div>
+        <h1>JavaScript Slider</h1>
+        <div class="slider" data-slider>
+            <ul class="slider__track" data-slider-track>
+                <li>
+                    <div class="slide"></div>
+                </li>
+                <li>
+                    <div class="slide2"></div>
+                </li>
+                <li>
+                    <div class="slide3"></div>
+                </li>
+                <li>
+                    <div class="slide4"></div>
+                </li>
+                <li>
+                    <div class="slide5"></div>
+                </li>
+                <li>
+                    <div class="slide6"></div>
+                </li>
+            </ul>
+            <div class="slider__buttons">
+                <div class="slider__arrow" data-slider-prev>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="slider__arrow" data-slider-next>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-       let rev = document.getElementByClassName("rev_slider");
-rev.addEventListener('init', (event, slick, currentSlide) => {
-  let cur = $(slick.$slides[slick.currentSlide]),
-    next = cur.nextElementSibling,
-    prev = cur.previousElementSibling;
-  prev.classList.add("slick-sprev");
-  next.classList.add("slick-snext");
-  cur.classList.remove("slick-snext").classList.remove("slick-sprev");
-  slick.$prev = prev;
-  slick.$next = next;
-});
-rev.addEventListener('beforeChange', (event, slick, currentSlide, nextSlide) => {
-  
-  let cur = $(slick.$slides[nextSlide]);
-  
-  slick.$prev.classList.remove("slick-sprev");
-  slick.$next.classList.remove("slick-snext");
-  next = cur.nextElementSibling,
-    prev = cur.previousElementSibling;
-  prev.previousElementSibling;
-  prev.nextElementSibling;
-  prev.classList.add("slick-sprev");
-  next.classList.add("slick-snext");
-  slick.$prev = prev;
-  slick.$next = next;
-  cur.classList.remove("slick-next").classList.remove("slick-sprev");
-});
+    <script src="./js/script.js">
 
-rev.slick({
-  speed: 1000,
-  arrows: true,
-  dots: false,
-  focusOnSelect: true,
-  prevArrow: '<button> prev</button>',
-  nextArrow: '<button> next</button>',
-  infinite: true,
-  centerMode: true,
-  slidesPerRow: 1,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerPadding: '0',
-  swipe: true,
-  customPaging: function(slider, i) {
-    return '';
-  },
-  
-});
     </script>
-
+    <script src="./js/jquery-3.7.1.min.js"></script>
 </body>
 
 </html>
